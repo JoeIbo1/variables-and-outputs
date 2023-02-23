@@ -31,10 +31,17 @@ function numberDown() {
 }
 
 function displayNumber(){
- console.log("displayNumber");
+console.log("displayNumber");
 document.querySelector("#number").textContent = number;
-let message = `The number is: ${number}`;
-console.log(message);
-document.querySelector("#message").textContent = message;
 
+let message ="";
+
+if (number > 10) {
+message = "tallet er større end 10";
+}else if(number == 10){
+message = "tallet er 10";
+}else{
+message = "tallet er mindre end 10";
+}
+document.querySelector("#message").textContent = message;
 }
